@@ -8,4 +8,9 @@ router.get('/ping', PageController.ping);
 // ! Only use once.
 router.post('/addAllCharacters', PageController.addAllCharacters);
 
+
+// TODO: A route that returns a random champion with the role, damage type and range info.
+// ? { "role": { "$all": ["mid"] } } -> Query in MongoDB compass
+
+
 export default router;
