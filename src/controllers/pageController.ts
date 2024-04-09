@@ -31,7 +31,7 @@ export const getChampion = async (req: Request, res: Response) => {
 			{$sample: {size: 1}}
 		])
 		console.log(result);
-		res.send({result});
+		res.send({requirements: match, result});
 	} catch (error) {
 		console.log(error);
 		res.send({status: 'error'});
