@@ -7,7 +7,7 @@
   </a>
 </div>
 
-## Esse projeto é uma API que se comunica com um banco de dados MongoDB que contém todos os personagens do jogo `League of legend`.
+## Esse projeto é uma API que se comunica com um banco de dados MongoDB que contém todos os personagens do jogo `League of legends`.
 
 ### Todos os personagens contém informações como: Rota, tipo dano/jogo, se é um campeão ranged ou não.
 
