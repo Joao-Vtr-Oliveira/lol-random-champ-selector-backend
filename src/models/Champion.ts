@@ -1,16 +1,5 @@
 import { Schema, model, connection, Model } from 'mongoose';
-
-type Roles = 'top' | 'jg'| 'mid' | 'adc' | 'sup';
-type DamageType = 'ad' | 'ap' | 'tank';
-type Range = 'melee' | 'ranged';
-
-export type ChampionType = {
-  name: string;
-  role: Roles[];
-  type: DamageType[];
-  nameBase: string;
-  range: Range[];
-}
+import { ChampionType } from '../types/championsTypes';
 
 const schema = new Schema<ChampionType>({
   name: {type: String, required: true, unique: true},
