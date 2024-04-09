@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 import Champion from '../models/Champion';
 import { champions } from '../utils/champions';
-import { championQuery } from '../types/championQueryType';
 import { mountData } from '../utils/mountData';
 
 export const ping = (req: Request, res: Response) => {
@@ -21,9 +20,9 @@ export const addAllCharacters = async (req: Request, res: Response) => {
 	}
 };
 
+// ? Controller that returns a random champion
 export const getChampion = async (req: Request, res: Response) => {
 	const {role, type, range} = req.body;
-	console.log({role, type, range});
 	
 	try {
 		const match = mountData({role, type, range});
