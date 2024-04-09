@@ -3,7 +3,7 @@ import Champion from '../models/Champion';
 import { champions } from '../utils/champions';
 
 export const ping = (req: Request, res: Response) => {
-	console.log('foi')
+	console.log('Sucess');
 	res.send({ pong: true });
 };
 
