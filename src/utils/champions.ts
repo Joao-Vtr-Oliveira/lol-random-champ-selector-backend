@@ -1,4 +1,4 @@
-import { ChampionType } from '../models/Champion';
+import { ChampionType } from '../types/championsTypes';
 
 export const champions: ChampionType[] = [
   {name: 'Aatrox', role: ['top'], type: ['ad'], nameBase: 'aatrox', range: ['melee']},
