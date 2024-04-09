@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import Champion from '../models/Champion';
 import { champions } from '../utils/champions';
+import { championQuery } from '../types/championQueryType';
+import { mountData } from '../utils/mountData';
 
 export const ping = (req: Request, res: Response) => {
 	console.log('Sucess');
@@ -18,3 +20,21 @@ export const addAllCharacters = async (req: Request, res: Response) => {
 		res.send({status: 'erro'})
 	}
 };
+
+export const getChampion = async (req: Request, res: Response) => {
+	const {role, type, range} = req.body;
+	console.log({role, type, range});
+	
+	try {
+		const match = mountData({role, type, range});
+		const result = await Champion.aggregate([
+			{$match: match},
+			{$sample: {size: 1}}
+		])
+		console.log(result);
+		res.send({result});
+	} catch (error) {
+		console.log(error);
+		res.send({status: 'error'});
+	}
+}
