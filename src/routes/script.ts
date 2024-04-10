@@ -20,4 +20,7 @@ router.post('/addNewChampion', PageController.addNewChampion);
 // Route that deletes a champion
 router.delete('/deleteChampion', PageController.deleteChampion);
 
+// Route that updates a champion
+router.put('/updateChampion', PageController.updateChampion);
+
 export default router;
