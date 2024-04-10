@@ -1,5 +1,5 @@
 export type championQuery = {
-	type?: string;
-	range?: string;
-	role?: string;
+	type?: 'ad' | 'ap' | 'tank';
+	ranged?: 'true' | 'false';
+	role?: 'top' | 'jg' | 'mid' | 'adc' | 'sup';
 }
