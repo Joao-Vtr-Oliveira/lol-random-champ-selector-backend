@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import Champion from '../models/Champion';
-import { champions } from '../utils/champions';
+import { champions } from '../utils/championsList';
 import { mountData } from '../utils/mountData';
 
 export const ping = (req: Request, res: Response) => {
@@ -22,10 +22,11 @@ export const addAllCharacters = async (req: Request, res: Response) => {
 
 // ? Controller that returns a random champion
 export const getChampion = async (req: Request, res: Response) => {
-	const {role, type, range} = req.body;
+	const {role, type, ranged} = req.body;
 	
 	try {
-		const match = mountData({role, type, range});
+		const match = mountData({role, type, ranged});
+		console.log(match)
 		const result = await Champion.aggregate([
 			{$match: match},
 			{$sample: {size: 1}}
