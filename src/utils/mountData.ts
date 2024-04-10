@@ -1,21 +1,8 @@
-import { championQuery } from '../types/championQueryType';
+import { ChampionQuery } from '../types/championQueryType';
+import { ChampionMountType } from '../types/championsTypes';
 
-export type DataType = {
-  top?: boolean;
-  jg?: boolean;
-  mid?: boolean;
-  adc?: boolean;
-  sup?: boolean;
-  ad?: boolean;
-  ap?: boolean;
-  tank?: boolean;
-  ranged?: boolean;
-}
-
-// ? Lanes -> Type -> Range
-
-export const mountData = ({role, type, ranged}: championQuery) => {
-	const match: DataType = {}
+export const mountData = ({role, type, ranged}: ChampionQuery) => {
+	const match: ChampionMountType = {}
 	if (role !== undefined) match[role] = true;
 	if (type !== undefined) match[type] = true;
 	if (ranged !== undefined) match.ranged = ranged === 'true' ? true : false;

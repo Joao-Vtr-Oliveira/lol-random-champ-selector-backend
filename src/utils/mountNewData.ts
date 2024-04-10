@@ -1,19 +1,12 @@
-import { ChampionType } from '../types/championsTypes';
+import { ChampionQuery } from '../types/championQueryType';
+import { ChampionType, RolesType, TypeDamageType } from '../types/championsTypes';
 
-export type championQuery = {
+interface ChampionNewQuery extends ChampionQuery {
   name: string;
   nameBase: string;
-	type?: 'ad' | 'ap' | 'tank';
-	ranged?: 'true' | 'false';
-	role?: 'top' | 'jg' | 'mid' | 'adc' | 'sup';
 }
 
-type RolesType = 'top' | 'jg' | 'mid' | 'adc' | 'sup';
-type TypeDamageType = 'ad' | 'ap' | 'tank';
-
-
-
-export const mountNewData = ({name, nameBase, role, type, ranged}: championQuery) => {
+export const mountNewData = ({name, nameBase, role, type, ranged}: ChampionNewQuery) => {
 	const match: ChampionType = {
     name,
     nameBase,
