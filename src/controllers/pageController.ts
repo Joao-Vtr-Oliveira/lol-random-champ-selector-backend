@@ -53,6 +53,8 @@ export const getAllChampions = async (req: Request, res: Response) => {
 	}
 };
 
+// ? Controller that adds a new champion in the data base
+// ! The roles and types must be send in a string with comma. Ex.: "adc,sup,top" - "ad,tank"
 export const addNewChampion = async (req: Request, res: Response) => {
 	const { role, type, ranged, name, nameBase } = req.body;
 
