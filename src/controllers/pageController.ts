@@ -69,3 +69,19 @@ export const addNewChampion = async (req: Request, res: Response) => {
 		res.status(400).send({status: 'error'});
 	}
 }
+
+// Controller that deletes a champion
+export const deleteChampion = async (req: Request, res: Response) => {
+	const name = req.body.name;
+	if(!name) return res.status(400).send({status: 'error', message: 'Please, send the champion\'s name.'});
+	try {
+		const result = await Champion.findOne({name});
+		console.log('Apagando o campeão: ', result);
+		if(result === null) return res.status(404).send({status: 'error', message: `There is no ${name} champion in DB`});
+		await result?.deleteOne();
+		res.status(201).send({status:'OK', message: `${name} was deleted`});
+	} catch(error) {
+		console.log(error);
+		res.status(400).send({status: 'error'});
+	}
+}
