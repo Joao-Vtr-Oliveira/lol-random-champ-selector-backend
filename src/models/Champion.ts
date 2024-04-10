@@ -1,12 +1,31 @@
 import { Schema, model, connection, Model } from 'mongoose';
-import { ChampionType } from '../types/championsTypes';
+
+export type ChampionType = {
+  name: string;
+  top: boolean;
+  jg: boolean;
+  mid: boolean;
+  adc: boolean;
+  sup: boolean;
+  ad: boolean;
+  ap: boolean;
+  tank: boolean;
+  ranged: boolean;
+  nameBase: string;
+}
 
 const schema = new Schema<ChampionType>({
   name: {type: String, required: true, unique: true},
-  role: {type: [String], required: true, enum: ['top', 'jg', 'mid', 'adc', 'sup']},
-  type: {type: [String], required: true, enum: ['ad', 'ap', 'tank']},
+  top: {type: Boolean, required: true},
+  jg: {type: Boolean, required: true},
+  mid: {type: Boolean, required: true},
+  adc: {type: Boolean, required: true},
+  sup: {type: Boolean, required: true},
+  ad: {type: Boolean, required: true},
+  ap: {type: Boolean, required: true},
+  tank: {type: Boolean, required: true},
+  ranged: {type: Boolean, required: true},
   nameBase: {type: String, required: true, unique: true},
-  range: {type: [String], required: true, enum: ['melee', 'ranged']}
 });
 
 const modelName: string = 'Champion';
