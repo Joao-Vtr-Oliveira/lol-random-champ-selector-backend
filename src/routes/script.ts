@@ -14,4 +14,7 @@ router.post('/getChampion', PageController.getChampion)
 // Route that returns all champions
 router.get('/getAllChampions', PageController.getAllChampions)
 
+// Route that adds a new champion
+router.post('/addNewChampion', PageController.addNewChampion);
+
 export default router;
