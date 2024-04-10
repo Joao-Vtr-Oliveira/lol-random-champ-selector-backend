@@ -3,9 +3,8 @@ import Champion from '../database/schemas/Champion';
 import { champions } from '../utils/championsList';
 import { mountData } from '../utils/mountData';
 import { mountNewData } from '../utils/mountNewData';
+import { mountUpdatedData } from '../utils/updateData';
 
-// TODO: A route to add a new champion.
-// TODO: A route to edit a existent champion.
 
 export const ping = (req: Request, res: Response) => {
 	console.log('Sucess');
@@ -81,6 +80,23 @@ export const deleteChampion = async (req: Request, res: Response) => {
 		await result?.deleteOne();
 		res.status(201).send({status:'OK', message: `${name} was deleted`});
 	} catch(error) {
+		console.log(error);
+		res.status(400).send({status: 'error'});
+	}
+}
+
+// Controller that updates a champion
+export const updateChampion = async (req: Request, res: Response) => {
+	const { role, type, ranged, name, nameBase } = req.body;
+
+	if(!name && !nameBase) return res.status(400).send({status: 'error', message: 'Please, send all information.'});
+	
+	try {
+		const match = mountUpdatedData({name, nameBase, role, type, ranged});
+		const result = await Champion.updateOne({name}, match);
+		if(result.matchedCount === 0) return res.status(404).send({status: 'error', message: `There is no ${name} champion in DB`});
+		res.status(200).send({status: 'OK', updatedChampion: match});
+	} catch (error) {
 		console.log(error);
 		res.status(400).send({status: 'error'});
 	}
