@@ -24,8 +24,7 @@
 ---
 
 
-# Exemplo:
-![2024-04-10 15-14-20](https://github.com/Joao-Vtr-Oliveira/lol-random-champ-selector-backend/assets/114768964/30d2ffdb-b055-4104-b601-e2ef4d8a16f6)
+# Exemplo: ![2024-04-10 15-14-20](https://github.com/Joao-Vtr-Oliveira/lol-random-champ-selector-backend/assets/114768964/a826e59e-37e3-4ce1-b859-f084b6e95738)
 
 
 ### Ele foi feito com Node.js e Express utilizando TypeScript em sua base, e foi utilizado MongoDB como Banco de Dados e o mongoose como ORM.
