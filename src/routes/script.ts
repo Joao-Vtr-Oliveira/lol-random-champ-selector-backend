@@ -17,4 +17,7 @@ router.get('/getAllChampions', PageController.getAllChampions)
 // Route that adds a new champion
 router.post('/addNewChampion', PageController.addNewChampion);
 
+// Route that deletes a champion
+router.delete('/deleteChampion', PageController.deleteChampion);
+
 export default router;
