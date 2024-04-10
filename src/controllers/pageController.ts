@@ -2,6 +2,10 @@ import { Request, Response } from 'express';
 import Champion from '../database/schemas/Champion';
 import { champions } from '../utils/championsList';
 import { mountData } from '../utils/mountData';
+import { mountNewData } from '../utils/mountNewData';
+
+// TODO: A route to add a new champion.
+// TODO: A route to edit a existent champion.
 
 export const ping = (req: Request, res: Response) => {
 	console.log('Sucess');
@@ -48,3 +52,18 @@ export const getAllChampions = async (req: Request, res: Response) => {
 		res.status(400).send({ status: 'error' });
 	}
 };
+
+export const addNewChampion = async (req: Request, res: Response) => {
+	const { role, type, ranged, name, nameBase } = req.body;
+
+	if(!name && !nameBase) return res.status(400).send({status: 'error', message: 'Please, send all information.'});
+	
+	try {
+		const match = mountNewData({name, nameBase, role, type, ranged});
+		const result = await Champion.create(match);
+		res.status(200).send({status: 'OK', newChampion: result});
+	} catch (error) {
+		console.log(error);
+		res.status(400).send({status: 'error'});
+	}
+}
