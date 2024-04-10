@@ -26,17 +26,15 @@ export const getChampion = async (req: Request, res: Response) => {
 
 	try {
 		const match = mountData({ role, type, ranged });
-		console.log(match);
 		const result = await Champion.aggregate([
 			{ $match: match },
 			{ $sample: { size: 1 } },
 		]);
-		console.log(result);
-
-		res.send({ requirements: match, result });
+		if(result.length > 0) return res.send({ requirements: match, result });
+		res.status(404).send({requirements: match, status: 'There is none champion with your requirements.'});
 	} catch (error) {
 		console.log(error);
-		res.send({ status: 'error' });
+		res.status(400).send({ status: 'error' });
 	}
 };
 
@@ -47,6 +45,6 @@ export const getAllChampions = async (req: Request, res: Response) => {
 		res.send({ result });
 	} catch (error) {
 		console.log(error);
-		res.send({ status: 'error' });
+		res.status(400).send({ status: 'error' });
 	}
 };
