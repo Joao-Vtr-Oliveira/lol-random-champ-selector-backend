@@ -14,11 +14,14 @@ router.post('/getRandomChampion', PageController.getRandomChampion);
 // Route that returns all champions
 router.get('/getAllChampions', PageController.getAllChampions);
 
+// Route that returns a SPECIF champion selected by name.
+router.post('/getSpecificChampion', PageController.getSpecifChampion);
+
 // Route that adds a new champion
 router.post('/addNewChampion', PageController.addNewChampion);
 
 // Route that deletes a champion
-router.delete('/deleteChampion', PageController.deleteChampion);
+router.delete('/deleteChampion', PageController.deleteChampion);      
 
 // Route that updates a champion
 router.put('/updateChampion', PageController.updateChampion);
