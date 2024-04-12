@@ -44,7 +44,7 @@ export const getRandomChampion = async (req: Request, res: Response) => {
 // ? Controller that returns all champions
 export const getAllChampions = async (req: Request, res: Response) => {
 	try {
-		const result = await Champion.find({});
+		const result = await Champion.find({}).sort({nameBase: 'asc'});
 		res.send({ result });
 	} catch (error) {
 		console.log(error);
@@ -78,7 +78,7 @@ export const addNewChampion = async (req: Request, res: Response) => {
 		res.status(200).send({status: 'OK', newChampion: result});
 	} catch (error) {
 		console.log(error);
-		res.status(400).send({status: 'error'});
+		res.status(400).send({status: 'error', message: error});
 	}
 }
 
