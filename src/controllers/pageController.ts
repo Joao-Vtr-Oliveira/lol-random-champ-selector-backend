@@ -52,6 +52,19 @@ export const getAllChampions = async (req: Request, res: Response) => {
 	}
 };
 
+// ? Controller that returns a specif name. Searching by it's base name.
+export const getSpecifChampion = async (req: Request, res: Response) => {
+	const nameBase = req.body.nameBase;
+	try {
+		if(!nameBase) return res.status(400).send({status: 'error', message: 'Please, send the champion base name.'});
+		const result = await Champion.findOne({nameBase});
+		res.status(200).send({result});
+	} catch (error) {
+		console.log(error);
+		res.status(400).send({status: 'error'})
+	}
+}
+
 // ? Controller that adds a new champion in the data base
 // ! The roles and types must be send in a string with comma. Ex.: "adc,sup,top" - "ad,tank"
 export const addNewChampion = async (req: Request, res: Response) => {
