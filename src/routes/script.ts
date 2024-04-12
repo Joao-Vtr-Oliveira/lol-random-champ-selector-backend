@@ -9,10 +9,10 @@ router.get('/ping', PageController.ping);
 router.post('/addAllCharacters', PageController.addAllCharacters);
 
 // Route that returns a random champ with the sent data
-router.post('/getChampion', PageController.getChampion)
+router.post('/getRandomChampion', PageController.getRandomChampion);
 
 // Route that returns all champions
-router.get('/getAllChampions', PageController.getAllChampions)
+router.get('/getAllChampions', PageController.getAllChampions);
 
 // Route that adds a new champion
 router.post('/addNewChampion', PageController.addNewChampion);

@@ -24,7 +24,7 @@ export const addAllCharacters = async (req: Request, res: Response) => {
 };
 
 // ? Controller that returns a random champion
-export const getChampion = async (req: Request, res: Response) => {
+export const getRandomChampion = async (req: Request, res: Response) => {
 	const { role, type, ranged } = req.body;
 
 	try {
