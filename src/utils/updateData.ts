@@ -23,19 +23,24 @@ export const mountUpdatedData = ({name, nameBase, role, type, ranged}: ChampionU
     match.mid = false;
     match.adc = false;
     match.sup = false;
-    const roleArray = role.split(',') as RolesType[];
+    const roleWithoutLastcomma = role.replace(/.$/, '');
+    const roleArray = roleWithoutLastcomma.split(',') as RolesType[];
     for (let i = 0; i < roleArray.length; i++) {
       match[roleArray[i]] = true;
     }
+    console.log('Roles: ', role);
+    console.log('Role array: ', roleArray)
   };
   if (type !== undefined) {
     match.ad = false;
     match.ap = false;
     match.tank = false;
-    const typeArray = type.split(',') as TypeDamageType[];
+    const typeWithoutLastcomma = type.replace(/.$/, '');
+    const typeArray = typeWithoutLastcomma.split(',') as TypeDamageType[];
     for (let i = 0; i < typeArray.length; i++) {
       match[typeArray[i]] = true;
     }
+    console.log('Type array: ', typeArray);
   };
 	if (ranged !== undefined) match.ranged = ranged === 'true' ? true : false;
   if (nameBase !== undefined) match.nameBase = nameBase;
