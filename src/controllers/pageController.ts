@@ -53,7 +53,7 @@ export const getAllChampions = async (req: Request, res: Response) => {
 };
 
 // ? Controller that returns a specif name. Searching by it's base name.
-export const getSpecifChampion = async (req: Request, res: Response) => {
+export const getSpecificChampion = async (req: Request, res: Response) => {
 	const nameBase = req.body.nameBase;
 	try {
 		if(!nameBase) return res.status(400).send({status: 'error', message: 'Please, send the champion base name.'});
@@ -86,7 +86,7 @@ export const addNewChampion = async (req: Request, res: Response) => {
 export const deleteChampion = async (req: Request, res: Response) => {
 	const name = req.body.name;
 	if(!name) return res.status(400).send({status: 'error', message: 'Please, send the champion\'s name.'});
-	try {
+	try {	
 		const result = await Champion.findOne({name});
 		console.log('Apagando o campeão: ', result);
 		if(result === null) return res.status(404).send({status: 'error', message: `There is no ${name} champion in DB`});

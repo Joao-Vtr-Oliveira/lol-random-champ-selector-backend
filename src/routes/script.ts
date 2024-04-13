@@ -15,7 +15,7 @@ router.post('/getRandomChampion', PageController.getRandomChampion);
 router.get('/getAllChampions', PageController.getAllChampions);
 
 // Route that returns a SPECIF champion selected by name.
-router.post('/getSpecificChampion', PageController.getSpecifChampion);
+router.post('/getSpecificChampion', PageController.getSpecificChampion);
 
 // Route that adds a new champion
 router.post('/addNewChampion', PageController.addNewChampion);
