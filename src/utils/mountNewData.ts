@@ -22,13 +22,15 @@ export const mountNewData = ({name, nameBase, role, type, ranged}: ChampionNewQu
   }
 
   if (role !== undefined) {
-    const roleArray = role.split(',') as RolesType[];
+    const roleWithoutLastcomma = role.replace(/.$/, '');
+    const roleArray = roleWithoutLastcomma.split(',') as RolesType[];
     for (let i = 0; i < roleArray.length; i++) {
       match[roleArray[i]] = true;
     }
   };
   if (type !== undefined) {
-    const typeArray = type.split(',') as TypeDamageType[];
+    const typeWithoutLastcomma = type.replace(/.$/, '');
+    const typeArray = typeWithoutLastcomma.split(',') as TypeDamageType[];
     for (let i = 0; i < typeArray.length; i++) {
       match[typeArray[i]] = true;
     }
