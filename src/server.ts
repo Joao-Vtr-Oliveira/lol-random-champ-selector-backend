@@ -21,4 +21,4 @@ server.use((req: Request, res: Response) => {
   res.status(404).send('Page not found');
 })
 
-server.listen(process.env.PORT);
+server.listen(80, '10.0.0.100');
