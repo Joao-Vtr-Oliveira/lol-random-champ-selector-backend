@@ -23,6 +23,9 @@
 #### Todos os campeões e suas predefinições estão em `src/utils/champions.ts` caso você queira criar seu próprio banco de dados e utilizar o projeto. Basta utilizar a rota que inicializa e adiciona todos os campeões no banco de dados.
 ---
 
+- Você pode ver a implementação front-end desse projeto [Aqui.](https://github.com/Joao-Vtr-Oliveira/lol-random-champ-selector-frontend)
+
+---
 
 # Exemplo: ![2024-04-10 15-14-20](https://github.com/Joao-Vtr-Oliveira/lol-random-champ-selector-backend/assets/114768964/a826e59e-37e3-4ce1-b859-f084b6e95738)
 
