@@ -29,7 +29,7 @@ router.delete('/deleteChampion', lolController.deleteChampion);
 router.put('/updateChampion', lolController.updateChampion);
 
 // ! Only use once.
-router.get('/valorant/addAllAgents', valorantController.addAllAgents);
+router.post('/valorant/addAllAgents', valorantController.addAllAgents);
 
 router.get('/valorant', valorantController.getAllAgents);
 
