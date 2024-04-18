@@ -1,0 +1,28 @@
+import { AgentType } from '../types/agentType';
+
+export const agents: AgentType[] = [
+  {name: 'Brimstone', controller: true, duelist: false, initiator: false, sentinel: false},
+  {name: 'Phoenix', controller: false, duelist: true, initiator: false, sentinel: false},
+  {name: 'Sage', controller: false, duelist: false, initiator: false, sentinel: true},
+  {name: 'Sova', controller: false, duelist: false, initiator: true, sentinel: false},
+  {name: 'Viper', controller: true, duelist: false, initiator: false, sentinel: false},
+  {name: 'Cypher', controller: false, duelist: false, initiator: false, sentinel: true},
+  {name: 'Reyna', controller: false, duelist: true, initiator: false, sentinel: false},
+  {name: 'Killjoy', controller: false, duelist: false, initiator: false, sentinel: true},
+  {name: 'Breach', controller: false, duelist: false, initiator: true, sentinel: false},
+  {name: 'Omen', controller: true, duelist: false, initiator: false, sentinel: false},
+  {name: 'Jett', controller: false, duelist: true, initiator: false, sentinel: false},
+  {name: 'Raze', controller: false, duelist: true, initiator: false, sentinel: false},
+  {name: 'Skye', controller: false, duelist: false, initiator: true, sentinel: false},
+  {name: 'Yoru', controller: false, duelist: true, initiator: false, sentinel: false},
+  {name: 'Astra', controller: true, duelist: false, initiator: false, sentinel: false},
+  {name: 'KAY/O', controller: false, duelist: false, initiator: true, sentinel: false},
+  {name: 'Chamber', controller: false, duelist: false, initiator: false, sentinel: true},
+  {name: 'Neon', controller: false, duelist: true, initiator: false, sentinel: false},
+  {name: 'Fade', controller: false, duelist: false, initiator: true, sentinel: false},
+  {name: 'Harbor', controller: true, duelist: false, initiator: false, sentinel: false},
+  {name: 'Gekko', controller: false, duelist: false, initiator: true, sentinel: false},
+  {name: 'Deadlock', controller: false, duelist: false, initiator: false, sentinel: true},
+  {name: 'Iso', controller: false, duelist: true, initiator: false, sentinel: false},
+  {name: 'Clove', controller: true, duelist: false, initiator: false, sentinel: false},
+];
