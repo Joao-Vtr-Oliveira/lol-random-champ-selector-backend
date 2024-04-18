@@ -31,6 +31,8 @@ router.put('/updateChampion', lolController.updateChampion);
 // ! Only use once.
 router.post('/valorant/addAllAgents', valorantController.addAllAgents);
 
-router.get('/valorant', valorantController.getAllAgents);
+router.get('/valorant/getAllAgents', valorantController.getAllAgents);
+
+router.get('/valorant/getRandomAgent', valorantController.getRandomAgent);
 
 export default router;
