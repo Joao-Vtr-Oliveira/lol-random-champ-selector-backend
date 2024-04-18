@@ -28,6 +28,9 @@ router.delete('/deleteChampion', lolController.deleteChampion);
 // Route that updates a champion
 router.put('/updateChampion', lolController.updateChampion);
 
+// ! Only use once.
+router.get('/valorant/addAllAgents', valorantController.addAllAgents);
+
 router.get('/valorant', valorantController.getAllAgents);
 
 export default router;
