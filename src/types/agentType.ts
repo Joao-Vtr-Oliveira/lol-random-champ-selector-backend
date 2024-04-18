@@ -6,4 +6,4 @@ export type AgentType = {
   initiator: boolean;
 }
 
-export type Role = 'controller' | 'duelist' | 'sentinel' | 'initiator'
+export type Role = 'controller' | 'duelist' | 'sentinel' | 'initiator';
