@@ -35,8 +35,10 @@ router.post('/valorant/addAllAgents', valorantController.addAllAgents);
 
 router.get('/valorant/getAllAgents', valorantController.getAllAgents);
 
-router.get('/valorant/getRandomAgent', valorantController.getRandomAgent);
+router.post('/valorant/getRandomAgent', valorantController.getRandomAgent);
 
 router.post('/valorant/addNewAgent', valorantController.addNewAgent);
+
+router.delete('/valorant/deleteAgent', valorantController.deleteAgent);
 
 export default router;
