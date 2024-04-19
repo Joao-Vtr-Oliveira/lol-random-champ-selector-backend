@@ -59,7 +59,7 @@ export const addNewAgent = async (req: Request, res: Response) => {
 	try {
 		const match = mountNewAgentData({name, role});
 		const result = await Agent.create(match);
-		res.status(200).send({status: 'OK', newChampion: result});
+		res.status(200).send({status: 'OK', newAgent: result});
 	} catch (error) {
 		console.log(error);
 		res.status(400).send({status: 'error', message: error});
@@ -73,7 +73,7 @@ export const deleteAgent = async (req: Request, res: Response) => {
 	try {	
 		const result = await Agent.findOne({name});
 		console.log('Apagando o agente: ', result);
-		if(result === null) return res.status(404).send({status: 'error', message: `There is no ${name} champion in DB`});
+		if(result === null) return res.status(404).send({status: 'error', message: `There is no ${name} agent in DB`});
 		await result?.deleteOne();
 		res.status(201).send({status:'OK', message: `${name} was deleted`});
 	} catch(error) {
