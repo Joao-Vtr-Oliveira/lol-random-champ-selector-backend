@@ -4,9 +4,15 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mainRoutes from './routes/script';
 import { mongoConnect } from './database/mongo';
+import { addAllCharactersFunction } from './utils/addAllCharacters';
+import { addAllAgentsFunction } from './utils/addAllAgentsFunction';
 
 dotenv.config();
 mongoConnect();
+
+// Add champions and agents in the database.
+addAllCharactersFunction();
+addAllAgentsFunction();
 
 const server = express();
 server.use(cors());
@@ -21,4 +27,4 @@ server.use((req: Request, res: Response) => {
   res.status(404).send('Page not found');
 })
 
-server.listen(80);
+server.listen(3000);

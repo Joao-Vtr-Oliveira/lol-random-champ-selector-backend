@@ -4,12 +4,12 @@ import { agents } from '../utils/agentList';
 import { mountAgentData } from '../utils/mountAgentData';
 import { mountNewAgentData } from '../utils/mountNewAgentData';
 import { Role } from '../types/agentType';
+import { addAllAgentsFunction } from '../utils/addAllAgentsFunction';
 
 // ! Controller that adds the agents, will cause error
 export const addAllAgents = async (req: Request, res: Response) => {
 	try {
-		const result = await Agent.insertMany(agents, { ordered: true });
-		console.log(result);
+		const result = await addAllAgentsFunction();
 		res.send({ status: 'ok', champios: result });
 	} catch (error) {
 		console.log(error);

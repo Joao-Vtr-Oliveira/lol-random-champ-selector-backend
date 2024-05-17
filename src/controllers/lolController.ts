@@ -1,15 +1,14 @@
 import { Request, Response } from 'express';
 import Champion from '../database/schemas/Champion';
-import { champions } from '../utils/championsList';
 import { mountData } from '../utils/mountData';
 import { mountNewData } from '../utils/mountNewData';
 import { mountUpdatedData } from '../utils/updateData';
+import { addAllCharactersFunction } from '../utils/addAllCharacters';
 
 // ! Controller that adds the champions, will cause error
 export const addAllCharacters = async (req: Request, res: Response) => {
 	try {
-		const result = await Champion.insertMany(champions, { ordered: true });
-		console.log(result);
+		const result = await addAllCharactersFunction();
 		res.send({ status: 'ok', champios: result });
 	} catch (error) {
 		console.log(error);
