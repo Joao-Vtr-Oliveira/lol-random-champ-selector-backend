@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import Champion from '../database/schemas/Champion';
-import { champions } from '../utils/championsList';
 import { mountData } from '../utils/mountData';
 import { mountNewData } from '../utils/mountNewData';
 import { mountUpdatedData } from '../utils/updateData';
