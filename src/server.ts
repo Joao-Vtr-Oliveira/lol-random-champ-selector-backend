@@ -4,9 +4,11 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mainRoutes from './routes/script';
 import { mongoConnect } from './database/mongo';
+import { addAllCharacters } from './utils/addAllCharacters';
 
 dotenv.config();
 mongoConnect();
+addAllCharacters();
 
 const server = express();
 server.use(cors());
