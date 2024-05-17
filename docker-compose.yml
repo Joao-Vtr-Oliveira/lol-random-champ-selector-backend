@@ -1,0 +1,43 @@
+version: '3'
+services:
+  meu-mongodb:
+    build: 
+      context: .
+      dockerfile: mongodb.dockerfile
+    container_name: meu-mongodb
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - volume-lol:/data/db
+    networks:
+      - lol-project
+  mongo-express:
+    build: 
+      context: .
+      dockerfile: mongo-express.dockerfile
+    container_name: mongo-express
+    depends_on:
+      - meu-mongodb
+    restart: always
+    ports:
+      - 8081:8081
+    networks:
+      - lol-project
+  node:
+    build: 
+      context: .
+      dockerfile: app.dockerfile
+    container_name: node
+    depends_on:
+      - meu-mongodb
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - lol-project
+volumes:
+  volume-lol:
+networks:
+  lol-project:
+    driver: bridge
