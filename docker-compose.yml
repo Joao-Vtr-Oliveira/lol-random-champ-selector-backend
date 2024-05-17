@@ -36,6 +36,17 @@ services:
       - 3000:3000
     networks:
       - lol-project
+  react:
+    image: react-app:v3
+    container_name: react
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - lol-project
+    depends_on:
+      - node
+      
 volumes:
   volume-lol:
 networks:
