@@ -10,6 +10,7 @@ const mongoDatabase = 'mydb';
 export const mongoConnect = async () => {
   try {
     console.log('Conectando ao MongoDB...');
+    console.log(mongoHost);
     await connect(`mongodb://${mongoHost}:${mongoPort}`);
     console.log('MongoDB conectado com sucesso!');
   } catch(error) {
