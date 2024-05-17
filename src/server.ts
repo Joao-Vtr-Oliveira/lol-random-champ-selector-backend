@@ -5,10 +5,14 @@ import dotenv from 'dotenv';
 import mainRoutes from './routes/script';
 import { mongoConnect } from './database/mongo';
 import { addAllCharactersFunction } from './utils/addAllCharacters';
+import { addAllAgentsFunction } from './utils/addAllAgentsFunction';
 
 dotenv.config();
 mongoConnect();
+
+// Add champions and agents in the database.
 addAllCharactersFunction();
+addAllAgentsFunction();
 
 const server = express();
 server.use(cors());
