@@ -3,7 +3,7 @@
 <div align=center>
   <p style='font-size: 25px; text-decoration: underline; font-weight: bold'>Ferramentas:</p>
   <a href="https://github.com/Joao-Vtr-Oliveira/todo-list-login">
-    <img src="https://skillicons.dev/icons?i=nodejs,ts,mongodb,postman" />
+    <img src="https://skillicons.dev/icons?i=nodejs,ts,mongodb,postman,docker" />
   </a>
 </div>
 
@@ -20,7 +20,8 @@
 - Uma rota que retorna todos os campeões do banco de dados
 - Uma rota que remove um campeão do banco de dados
 
-#### Todos os campeões e suas predefinições estão em `src/utils/champions.ts` caso você queira criar seu próprio banco de dados e utilizar o projeto. Basta utilizar a rota que inicializa e adiciona todos os campeões no banco de dados.
+
+> #### O projeto também há diferentes imagens docker (mongoDB, Mongo-express e node). Além disso, também há o docker-compose, que junta todas as imagens e também puxa a imagem do front-end. Já iniciando ambos os projetos.
 ---
 
 - Você pode ver a implementação front-end desse projeto [Aqui.](https://github.com/Joao-Vtr-Oliveira/lol-random-champ-selector-frontend)
