@@ -10,12 +10,16 @@ import { addAllAgentsFunction } from './utils/addAllAgentsFunction';
 dotenv.config();
 mongoConnect();
 
+
 // Add champions and agents in the database.
 addAllCharactersFunction();
 addAllAgentsFunction();
 
 const server = express();
-server.use(cors());
+
+server.use(cors({
+  origin: '*'
+}));
 
 server.use(express.static(path.join(__dirname, '../public')));
 
