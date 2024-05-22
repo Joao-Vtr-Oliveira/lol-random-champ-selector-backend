@@ -40,6 +40,8 @@ services:
     image: joaovtroliveira/react-app
     container_name: react
     restart: always
+    env_file:
+      - .env
     ports:
       - 8080:8080
     networks:
