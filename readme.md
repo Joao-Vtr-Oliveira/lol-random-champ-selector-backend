@@ -34,3 +34,30 @@
 ### Ele foi feito com Node.js e Express utilizando TypeScript em sua base, e foi utilizado MongoDB como Banco de Dados e o mongoose como ORM.
 
 ---
+
+## Como utilizar
+- **Tutorial para usar**
+    1. Entre no site [https://labs.play-with-docker.com/](https://labs.play-with-docker.com/)
+    2. Logue ou se cadastre na sua conta do docker
+    3. Crie uma nova instância
+    4. Digite: `git clone https://github.com/Joao-Vtr-Oliveira/lol-random-champ-selector-backend`  (Cole com **shift + ctrl + V**). Confirme com **`enter`**
+    5. Digite: `cd lol-random-champ-selector-backend` e confirme (Pode-se usar o tab para completar). E clique `enter`
+    6. Digite: `touch .env` e clique `enter`
+    7. Digite: `vim .env` e clique `enter`
+    
+    1. Clique “`i`” depois digite NEXT_PUBLIC_URL=(Monte a URL e coloque aqui. Siga os passos a baixo para fazer) `Sem os parênteses`
+        1. Você vai Copiar o código que está em SSH (Apenas a URL, sem o `SSH`)
+        2. Digite: `http://URL COPIADA` ...
+        3. Apague o @ e coloque  “`-3000.`"
+        4. **O LINK NÃO  DEVE TER A BARRA FINAL (/)**
+    
+    ---
+    
+    1. Após isso, você vai clicar `esc`
+    2. Clicar 2 pontos (:), digitar “`wq`" e clique `enter`
+    3. Depois digite: `docker compose up`
+    4. Vai esperar até tudo carregar (Demora um pouco)
+    5. Quando tudo tiver carregado, você vai clicar em `8080` (**No canto superior da tela**), caso não tenha, clique em `open port` e digite 8080.
+    6. A princípio **NÃO** vai carregar, voltando pra página do PWD, quando aparecer `REACT   | V compiled` é sinal que está pronto
+    7. Volte para a página aberta e dê **F5**
+    8. Aproveite!
