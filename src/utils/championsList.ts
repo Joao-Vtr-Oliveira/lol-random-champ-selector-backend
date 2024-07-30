@@ -12,6 +12,7 @@ export const champions: ChampionType[] = [
   {name: 'Aphelios', top: false, jg: false, mid: false, adc: true, sup: false, ad: true, ap: false, tank: false, ranged: true, nameBase: 'aphelios'},
   {name: 'Ashe', top: false, jg: false, mid: false, adc: true, sup: false, ad: true, ap: false, tank: false, ranged: true, nameBase: 'ashe'},
   {name: 'Aurelion Sol', top: false, jg: false, mid: true, adc: false, sup: false, ad: false, ap: true, tank: false, ranged: true, nameBase: 'aurelionsol'},
+  {name: 'Aurora', top: true, jg: false, mid: true, adc: false, sup: false, ad: false, ap: true, tank: false, ranged: true, nameBase: 'aurora'},
   {name: 'Azir', top: false, jg: false, mid: true, adc: false, sup: false, ad: false, ap: true, tank: false, ranged: true, nameBase: 'azir'},
   {name: 'Bard', top: false, jg: false, mid: false, adc: false, sup: true, ad: false, ap: true, tank: false, ranged: true, nameBase: 'bard'},
   {name: 'Bel\'Veth', top: false, jg: true, mid: false, adc: false, sup: false, ad: true, ap: false, tank: false, ranged: false, nameBase: 'belveth'},
