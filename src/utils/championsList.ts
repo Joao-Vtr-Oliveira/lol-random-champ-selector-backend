@@ -83,7 +83,7 @@ export const champions: ChampionType[] = [
   {name: 'Master Yi', top: false, jg: true, mid: false, adc: false, sup: false, ad: true, ap: false, tank: false, ranged: false, nameBase: 'masteryi'},
   {name: 'Milio', top: false, jg: false, mid: false, adc: false, sup: true, ad: false, ap: true, tank: false, ranged: true, nameBase: 'milio'},
   {name: 'Miss Fortune', top: false, jg: false, mid: false, adc: true, sup: false, ad: true, ap: false, tank: false, ranged: true, nameBase: 'missfortune'},
-  {name: 'Morderkaiser', top: true, jg: false, mid: false, adc: false, sup: false, ad: false, ap: true, tank: true, ranged: false, nameBase: 'mordekaiser'},
+  {name: 'Morderkaiser', top: true, jg: false, mid: false, adc: false, sup: false, ad: false, ap: true, tank: true, ranged: false, nameBase: 'morderkaiser'},
   {name: 'Morgana', top: false, jg: false, mid: false, adc: false, sup: true, ad: false, ap: true, tank: false, ranged: true, nameBase: 'morgana'},
   {name: 'Naafiri', top: false, jg: false, mid: true, adc: false, sup: false, ad: true, ap: false, tank: false, ranged: false, nameBase: 'naafiri'},
   {name: 'Nami', top: false, jg: false, mid: false, adc: false, sup: true, ad: false, ap: true, tank: false, ranged: true, nameBase: 'nami'},
