@@ -15,7 +15,7 @@ const mongoDatabase = 'mydb';
 export const mongoConnect = async () => {
   try {
     console.log('Conectando ao MongoDB...');
-    console.log(mongoHost);
+    console.log(url);
     await connect(url);
     console.log('MongoDB conectado com sucesso!');
   } catch(error) {
