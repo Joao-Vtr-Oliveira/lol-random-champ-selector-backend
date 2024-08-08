@@ -7,8 +7,11 @@ const mongoHost = process.env.MONGODB;
 const mongoPort = 27017;
 
 let url: string;
-if(!mongoHost) url = `mongodb://${mongoHost}:${mongoPort}`;
-url = process.env.MONGO_URL || 'mongodb://localhost:27017/lol-random-champ-selector-project';
+if(mongoHost) {
+  url = `mongodb://${mongoHost}:${mongoPort}`
+} else {
+  url = process.env.MONGO_URL || 'mongodb://localhost:27017/lol-random-champ-selector-project';
+}
 
 const mongoDatabase = 'mydb';
 

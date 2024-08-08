@@ -37,7 +37,7 @@ services:
     networks:
       - lol-project
   react:
-    image: joaovtroliveira/react-app
+    image: joaovtroliveira/react-app:v1
     container_name: react
     restart: always
     env_file:
