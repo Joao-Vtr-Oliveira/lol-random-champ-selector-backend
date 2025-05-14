@@ -1,4 +1,4 @@
-# Lol random champ selector (backend)
+# Lol random champ selector (backend).
 
 <div align=center>
   <p style='font-size: 25px; text-decoration: underline; font-weight: bold'>Ferramentas:</p>
